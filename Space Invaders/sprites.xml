@@ -1,0 +1,16 @@
+<TextureAtlas imagePath="sprites.png">
+	<SubTexture name="InvaderA_00.png" x="84" y="102" width="24" height="16"/>
+	<SubTexture name="InvaderA_00@2x.png" x="62" y="0" width="48" height="32"/>
+	<SubTexture name="InvaderA_01.png" x="100" y="68" width="24" height="16"/>
+	<SubTexture name="InvaderA_01@2x.png" x="50" y="34" width="48" height="32"/>
+	<SubTexture name="InvaderB_00.png" x="58" y="102" width="24" height="16"/>
+	<SubTexture name="InvaderB_00@2x.png" x="50" y="68" width="48" height="32"/>
+	<SubTexture name="InvaderB_01.png" x="110" y="104" width="24" height="16"/>
+	<SubTexture name="InvaderB_01@2x.png" x="0" y="34" width="48" height="32"/>
+	<SubTexture name="InvaderC_00.png" x="32" y="102" width="24" height="16"/>
+	<SubTexture name="InvaderC_00@2x.png" x="100" y="34" width="48" height="32"/>
+	<SubTexture name="InvaderC_01.png" x="110" y="86" width="24" height="16"/>
+	<SubTexture name="InvaderC_01@2x.png" x="0" y="68" width="48" height="32"/>
+	<SubTexture name="Ship.png" x="0" y="102" width="30" height="16"/>
+	<SubTexture name="Ship@2x.png" x="0" y="0" width="60" height="32"/>
+</TextureAtlas>
