@@ -1,0 +1,22 @@
+<TextureAtlas imagePath="sprites2x.png">
+	<SubTexture name="barrel1.png" x="0" y="49" width="14" height="12"/>
+	<SubTexture name="barrel2.png" x="32" y="50" width="14" height="12"/>
+	<SubTexture name="barrel3.png" x="16" y="50" width="14" height="12"/>
+	<SubTexture name="barrel4.png" x="35" y="25" width="14" height="12"/>
+	<SubTexture name="block.png" x="49" y="12" width="10" height="10"/>
+	<SubTexture name="blockH.png" x="60" y="36" width="8" height="10"/>
+	<SubTexture name="blockV.png" x="35" y="39" width="10" height="8"/>
+	<SubTexture name="coin1.png" x="61" y="15" width="3" height="13"/>
+	<SubTexture name="coin2.png" x="60" y="48" width="6" height="13"/>
+	<SubTexture name="coin3.png" x="48" y="39" width="10" height="13"/>
+	<SubTexture name="coin4.png" x="48" y="54" width="10" height="13"/>
+	<SubTexture name="coin5.png" x="61" y="0" width="6" height="13"/>
+	<SubTexture name="floor.png" x="37" y="0" width="11" height="10"/>
+	<SubTexture name="floorL.png" x="37" y="12" width="10" height="10"/>
+	<SubTexture name="floorM.png" x="51" y="24" width="8" height="10"/>
+	<SubTexture name="floorR.png" x="50" y="0" width="9" height="10"/>
+	<SubTexture name="marioIdle.png" x="19" y="25" width="14" height="23"/>
+	<SubTexture name="marioJump.png" x="0" y="24" width="17" height="23"/>
+	<SubTexture name="marioWalk1.png" x="19" y="0" width="16" height="23"/>
+	<SubTexture name="marioWalk2.png" x="0" y="0" width="17" height="22"/>
+</TextureAtlas>
