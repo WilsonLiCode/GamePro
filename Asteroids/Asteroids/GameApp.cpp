@@ -182,10 +182,10 @@ void GameApp::Collision()
 						entities[i]->collided = true;
 						entities[j]->collided = true;
 
-						entities[i]->x += distance.x * (0.5f / length) * FIXED_TIMESTEP;
-						entities[i]->y += distance.y * (0.5f / length) * FIXED_TIMESTEP;
-						entities[j]->x -= distance.x * (0.5f / length) * FIXED_TIMESTEP;
-						entities[j]->y -= distance.y * (0.5f / length) * FIXED_TIMESTEP;
+						entities[i]->x += distance.x * (0.001f / length);
+						entities[i]->y += distance.y * (0.001f / length);
+						entities[j]->x -= distance.x * (0.001f / length);
+						entities[j]->y -= distance.y * (0.001f / length);
 					}
 				}
 			}
@@ -212,8 +212,8 @@ void GameApp::Collision()
 	}
 
 	//Check player hit
-	if (player.collided)
-		state = STATE_GAMEOVER;
+	//if (player.collided)
+	//	state = STATE_GAMEOVER;
 
 	//Check all asteroids destroyed
 	bool won = true;
@@ -232,7 +232,7 @@ bool GameApp::CheckBullet(Bullet* bullet1, Entity* entity2)
 	Vector bulletVector = Vector(bullet1->x, bullet1->y, 0.0f);
 
 	bulletVector = entityInverse * bulletVector;
-	if (bulletVector.x >= -entity2->getWidth() * 0.5f && bulletVector.x <= entity2->getWidth() * 0.5f && bulletVector.y >= -entity2->getHeight() * 0.5f && bulletVector.y <= entity2->getHeight() * 0.5f)
+	if (bulletVector.x >= -entity2->getWidth() && bulletVector.x <= entity2->getWidth() && bulletVector.y >= -entity2->getHeight() && bulletVector.y <= entity2->getHeight())
 		return true;
 	else
 		return false;
@@ -246,15 +246,15 @@ bool GameApp::CheckCollision(Entity* entity1, Entity* entity2)
 	Matrix entity1inverse = entity1->matrix.inverse();
 	Matrix entity2inverse = entity2->matrix.inverse();
 
-	Vector ent1TL = Vector(-entity1->getWidth() * 0.5f, entity1->getHeight() * 0.5f, 0.0f);
-	Vector ent1BL = Vector(-entity1->getWidth() * 0.5f, -entity1->getHeight() * 0.5f, 0.0f);
-	Vector ent1TR = Vector(entity1->getWidth() * 0.5f, entity1->getHeight() * 0.5f, 0.0f);
-	Vector ent1BR = Vector(entity1->getWidth() * 0.5f, -entity1->getHeight() * 0.5f, 0.0f);
+	Vector ent1TL = Vector(-entity1->getWidth(), entity1->getHeight(), 0.0f);
+	Vector ent1BL = Vector(-entity1->getWidth(), -entity1->getHeight(), 0.0f);
+	Vector ent1TR = Vector(entity1->getWidth(), entity1->getHeight(), 0.0f);
+	Vector ent1BR = Vector(entity1->getWidth(), -entity1->getHeight(), 0.0f);
 
-	Vector ent2TL = Vector(-entity2->getWidth() * 0.5f, entity2->getHeight() * 0.5f, 0.0f);
-	Vector ent2BL = Vector(-entity2->getWidth() * 0.5f, -entity2->getHeight() * 0.5f, 0.0f);
-	Vector ent2TR = Vector(entity2->getWidth() * 0.5f, entity2->getHeight() * 0.5f, 0.0f);
-	Vector ent2BR = Vector(entity2->getWidth() * 0.5f, -entity2->getHeight() * 0.5f, 0.0f);
+	Vector ent2TL = Vector(-entity2->getWidth(), entity2->getHeight(), 0.0f);
+	Vector ent2BL = Vector(-entity2->getWidth(), -entity2->getHeight(), 0.0f);
+	Vector ent2TR = Vector(entity2->getWidth(), entity2->getHeight(), 0.0f);
+	Vector ent2BR = Vector(entity2->getWidth(), -entity2->getHeight(), 0.0f);
 
 	//transform entity2 to world space
 	ent2TL = entity2->matrix * ent2TL;
@@ -271,20 +271,20 @@ bool GameApp::CheckCollision(Entity* entity1, Entity* entity2)
 	//check x axis
 	float minX = min(min(min(ent2TL.x, ent2BL.x), ent2TR.x), ent2BR.x);
 	float maxX = max(max(max(ent2TL.x, ent2BL.x), ent2TR.x), ent2BR.x);
-	if (minX > entity1->getWidth() * 0.5f || maxX < -entity1->getWidth() * 0.5f)
+	if (minX > entity1->getWidth() || maxX < -entity1->getWidth())
 		return false;
 
 	//check y axis
 	float minY = min(min(min(ent2TL.y, ent2BL.y), ent2TR.y), ent2BR.y);
 	float maxY = max(max(max(ent2TL.y, ent2BL.y), ent2TR.y), ent2BR.y);
-	if (minY > entity1->getHeight() * 0.5f || maxY < -entity1->getHeight() * 0.5f)
+	if (minY > entity1->getHeight() || maxY < -entity1->getHeight())
 		return false;
 
 	//reset entity2's vectors
-	ent2TL = Vector(-entity2->getWidth() * 0.5f, entity2->getHeight() * 0.5f, 0.0f);
-	ent2BL = Vector(-entity2->getWidth() * 0.5f, -entity2->getHeight() * 0.5f, 0.0f);
-	ent2TR = Vector(entity2->getWidth() * 0.5f, entity2->getHeight() * 0.5f, 0.0f);
-	ent2BR = Vector(entity2->getWidth() * 0.5f, -entity2->getHeight() * 0.5f, 0.0f);
+	ent2TL = Vector(-entity2->getWidth(), entity2->getHeight(), 0.0f);
+	ent2BL = Vector(-entity2->getWidth(), -entity2->getHeight(), 0.0f);
+	ent2TR = Vector(entity2->getWidth(), entity2->getHeight(), 0.0f);
+	ent2BR = Vector(entity2->getWidth(), -entity2->getHeight(), 0.0f);
 
 	//transform entity1 to world space
 	ent1TL = entity1->matrix * ent1TL;
@@ -301,13 +301,13 @@ bool GameApp::CheckCollision(Entity* entity1, Entity* entity2)
 	//check x axis
 	minX = min(min(min(ent1TL.x, ent1BL.x), ent1TR.x), ent1BR.x);
 	maxX = max(max(max(ent1TL.x, ent1BL.x), ent1TR.x), ent1BR.x);
-	if (minX > entity2->getWidth() * 0.5f || maxX < -entity2->getWidth() * 0.5f)
+	if (minX > entity2->getWidth() || maxX < -entity2->getWidth())
 		return false;
 
 	//check y axis
 	minY = min(min(min(ent1TL.y, ent1BL.y), ent1TR.y), ent1BR.y);
 	maxY = max(max(max(ent1TL.y, ent1BL.y), ent1TR.y), ent1BR.y);
-	if (minY > entity2->getHeight() * 0.5f || maxY < -entity2->getHeight() * 0.5f)
+	if (minY > entity2->getHeight() || maxY < -entity2->getHeight())
 		return false;
 
 	return true;
