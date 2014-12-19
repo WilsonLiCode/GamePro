@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="192" height="32" tilewidth="64" tileheight="64">
+ <tileset firstgid="1" name="spriteTiles" tilewidth="64" tileheight="64" spacing="2">
+  <image source="spriteTiles.png" width="924" height="924"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="192" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt2lGKwjAARdGuJ3t0Ba7A3WrB31pjE1/anAvnZ5Ci5OGU4rJI83V/uaXfhBSqvEkzZv+aOfvXzNm/JElKtj6LfIRIParZVgmSelSzLfvXaB29JymVr7X/eRvxPjS5SfufqxHPIb1L+79eW/cUZePvSeld2v/1Sp819v+PPn3PMxa/g25f+kypp/p8z1/H6PV4Rnj0mukzY57993iPR6+ZPjPOsf8Wv28qDa7R+prpM+Mc+09/Ntjzbb88L0p/NthT+z/ffQIAAAAAAAAjegLNzm5d
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object name="Player" type="Player" gid="190" x="195" y="1434"/>
+  <object type="PewShooter" gid="188" x="1255" y="1444"/>
+  <object type="PewShooter" gid="188" x="1860" y="1260"/>
+  <object type="PewShooter" gid="188" x="2381" y="1253"/>
+  <object type="PewShooter" gid="188" x="3029" y="1237"/>
+  <object type="PewShooter" gid="188" x="3789" y="1249"/>
+  <object type="PewShooter" gid="188" x="4393" y="1250"/>
+  <object type="PewShooter" gid="188" x="4853" y="1250"/>
+  <object type="PewShooter" gid="188" x="5233" y="1056"/>
+  <object type="PewShooter" gid="188" x="5619" y="934"/>
+  <object type="PewShooter" gid="188" x="5993" y="803"/>
+  <object type="PewShooter" gid="188" x="6572" y="798"/>
+  <object type="PewShooter" gid="188" x="7236" y="810"/>
+  <object type="PewShooter" gid="188" x="7853" y="810"/>
+  <object type="PewShooter" gid="188" x="8334" y="810"/>
+  <object type="PewShooter" gid="188" x="8803" y="618"/>
+  <object type="PewShooter" gid="188" x="9386" y="615"/>
+  <object type="PewShooter" gid="188" x="9960" y="616"/>
+  <object type="PewShooter" gid="188" x="10604" y="425"/>
+  <object type="PewShooter" gid="188" x="11214" y="426"/>
+  <object type="PewShooter" gid="188" x="11816" y="427"/>
+ </objectgroup>
+</map>

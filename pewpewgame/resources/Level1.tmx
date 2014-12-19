@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="192" height="32" tilewidth="64" tileheight="64">
+ <tileset firstgid="1" name="spriteTiles" tilewidth="64" tileheight="64" spacing="2">
+  <image source="spriteTiles.png" width="924" height="924"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="192" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztmettwzAQgz1D1kkXSBfIdJ0gS7ZFGyQQpES+O4ryiR/AX3FOJk34uW1CrMflR2f2TghB4vYvIVZE/Rcro/6LlVH/RWb0fLsGX+wdmBSd38UK/J7nrxXd+1/77VlCHJmbU2JuPrf6eeuDuVMk7lk8e1f/xcqo/2JlvP3Xe6IHrWepvfLmqWezP2r3OyXe/us68CAqS2+eOib9zHC8ssDuf+vdnWij/tspr6/s/q9+bHrud0rU/zhY/S/P+6WQ14Geua1tPP+NQv2Pg9V/5jHqmdvaxvPfKI7Y/9Y3nZaivvW8u75G9n+PP8TMPWv3bNPKK2K+533ZEfs/K5H9zyZ0XlZY67+7rxv93iJiPXbHZhY6LytR60dfN2u/e78Lvfo+9Wp/etdld2xmofOyws5llE+vV/T87ELnZYWdyyifXq/o+dmFzssKO5dRPr1e0fOzC52XFXYuo3x6vaLnZxc6LyvsXEb59HpFz88udF5W2LmM8un1ip6fXei8rHjXPQX7QPn0ekXPzy50XlbYuYzy6fWKnp9d6LyssHMZ5dPrFT0/u9B5WWHnIklH1jeSoQbz
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object name="Player" type="Player" gid="58" x="222" y="1298"/>
+  <object type="PewShooter" gid="188" x="760" y="1298"/>
+  <object type="PewShooter" gid="188" x="1008" y="1290"/>
+  <object type="PewShooter" gid="188" x="1534" y="1322"/>
+  <object type="PewShooter" gid="188" x="1928" y="1116"/>
+  <object type="PewShooter" gid="188" x="2482" y="1108"/>
+  <object type="PewShooter" gid="188" x="3394" y="1296"/>
+  <object type="PewShooter" gid="188" x="3064" y="1292"/>
+  <object type="PewShooter" gid="188" x="3862" y="1090"/>
+  <object type="PewShooter" gid="188" x="4084" y="930"/>
+  <object type="PewShooter" gid="188" x="4906" y="734"/>
+  <object type="PewShooter" gid="188" x="5298" y="716"/>
+  <object type="PewShooter" gid="188" x="4542" y="718"/>
+  <object type="PewShooter" gid="188" x="6844" y="544"/>
+  <object type="PewShooter" gid="188" x="7068" y="1084"/>
+  <object type="PewShooter" gid="188" x="7982" y="1100"/>
+  <object type="PewShooter" gid="188" x="8414" y="1088"/>
+  <object type="PewShooter" gid="188" x="9472" y="1116"/>
+  <object type="PewShooter" gid="188" x="9840" y="1100"/>
+  <object type="PewShooter" gid="188" x="10478" y="918"/>
+  <object type="PewShooter" gid="188" x="10994" y="544"/>
+  <object type="PewShooter" gid="188" x="10782" y="714"/>
+  <object type="PewShooter" gid="188" x="11442" y="412"/>
+ </objectgroup>
+</map>
